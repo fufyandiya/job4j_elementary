@@ -21,4 +21,13 @@ public class MaxTest {
         int expected = 5;
         Assert.assertEquals(result, expected);
     }
+
+    @Test
+    public void whenMax6To6Then5() {
+        int left = 6;
+        int right = 6;
+        int result = Max.max(left, right);
+        int expected = 6;
+        Assert.assertEquals(result, expected);
+    }
 }
