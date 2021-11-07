@@ -23,11 +23,32 @@ public class MaxTest {
     }
 
     @Test
-    public void whenMax6To6Then5() {
+    public void whenMax6To6Then6() {
         int left = 6;
         int right = 6;
         int result = Max.max(left, right);
         int expected = 6;
+        Assert.assertEquals(result, expected);
+    }
+
+    @Test
+    public void whenMax1To2To3Then3() {
+        int first = 1;
+        int second = 2;
+        int third = 3;
+        int result = Max.max(first, second, third);
+        int expected = 3;
+        Assert.assertEquals(result, expected);
+    }
+
+    @Test
+    public void whenMax1To5To0To3Then5() {
+        int first = 1;
+        int second = 5;
+        int third = 0;
+        int fourth = 3;
+        int result = Max.max(first, second, third, fourth);
+        int expected = 5;
         Assert.assertEquals(result, expected);
     }
 }
